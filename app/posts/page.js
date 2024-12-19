@@ -6,8 +6,6 @@ import { getPosts } from "../functions/api";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
 
-  console.log(posts);
-
   useEffect(() => {
     getPosts().then((posts) => {
       setPosts(posts);
@@ -19,8 +17,8 @@ const Posts = () => {
       <h1>Posts Page</h1>
 
       <ul>
-        {posts?.map((post) => (
-          <li>{post.title}</li>
+        {posts?.map(({ title, id }) => (
+          <li key={id}>{title}</li>
         ))}
       </ul>
     </div>
