@@ -18,3 +18,13 @@ body {
 a {
   color: inherit;
 }
+
+.nav {
+  background-color: teal;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
