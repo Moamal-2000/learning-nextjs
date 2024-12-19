@@ -1,16 +1,16 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import { getPosts } from "../functions/api";
 
-const Posts = () => {
-  const [posts, setPosts] = useState([]);
+const Posts = async () => {
+  const posts = await getPosts();
 
-  useEffect(() => {
-    getPosts().then((posts) => {
-      setPosts(posts);
-    });
-  }, []);
+  const post = {
+    body: "This is a new description for the new title",
+    id: 100000000,
+    title: "This is a new title",
+    userId: 1
+  }
+
+  posts.push(post)
 
   return (
     <div>

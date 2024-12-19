@@ -6,6 +6,6 @@ export async function getPosts() {
     const result = await res.data;
     return result;
   } catch (err) {
-    throw new Error(`Error while fetching posts: ${err}`)
+    Error(`Error while fetching posts: ${err}`)
   }
 }
