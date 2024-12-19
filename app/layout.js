@@ -2,7 +2,10 @@ import Nav from "./components/Nav.jsx";
 import "./globals.scss";
 
 export const metadata = {
-  title: "Learning Next.js",
+  title: {
+    default: "Learning Next.js",
+    template: "%s - Learning Next.js",
+  },
   description: "This template is a starting point for learning Next.js",
 };
 
