@@ -1,3 +1,4 @@
+import Link from "next/link";
 import s from "./page.module.scss";
 
 export default function HomePage() {
@@ -5,7 +6,7 @@ export default function HomePage() {
     <main className={s.home}>
       <h1>Home Page</h1>
 
-      <a href="/about">About</a>
+      <Link href="/about">About</Link>
     </main>
   );
 }
