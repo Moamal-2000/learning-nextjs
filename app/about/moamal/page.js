@@ -1,3 +1,8 @@
+
+export const metadata = {
+  title: "Me"
+}
+
 const Moamal = () => {
   return (
     <div>

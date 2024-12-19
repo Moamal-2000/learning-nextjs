@@ -1,3 +1,8 @@
+
+export const metadata = {
+  title: "Post"
+}
+
 const POST = async ({ params }) => {
   const { postId } = await params;
 
