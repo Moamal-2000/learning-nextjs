@@ -18,7 +18,7 @@ function ShowText({ slug, index }) {
     .map((_) => "-")
     .join("");
 
-  if (slug?.length <= index) return "";
+  if (slug?.length <= index || !slug) return "";
 
   return (
     <h2>
