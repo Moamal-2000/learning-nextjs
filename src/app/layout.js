@@ -1,4 +1,4 @@
-import Nav from "./components/Nav.jsx";
+import Nav from "../components/Nav.jsx";
 import "./globals.scss";
 
 export const metadata = {

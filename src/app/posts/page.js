@@ -1,4 +1,4 @@
-import { getPosts } from "../functions/api";
+import { getPosts } from "../../functions/api";
 
 const Posts = async () => {
   const posts = await getPosts();
