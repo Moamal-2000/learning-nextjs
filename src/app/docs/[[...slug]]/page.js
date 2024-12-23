@@ -1,3 +1,9 @@
+import ShowText from "@/src/components/ShowText";
+
+export const metadata = {
+  title: "Docs",
+};
+
 const Docs = async ({ params }) => {
   const { slug } = await params;
 
@@ -12,17 +18,3 @@ const Docs = async ({ params }) => {
 };
 
 export default Docs;
-
-function ShowText({ slug, index }) {
-  const slashes = Array.from({ length: index + 1 })
-    .map((_) => "-")
-    .join("");
-
-  if (slug?.length <= index || !slug) return "";
-
-  return (
-    <h2>
-      {slashes} {slug?.[index]}
-    </h2>
-  );
-}

@@ -6,7 +6,7 @@ const Moamal = () => {
   return (
     <div>
       <h1>This is me</h1>
-      <p>Moamal Alaa kareem Front-end developer!</p>
+      <p>Moamal Alaa is a Front-end developer</p>
     </div>
   );
 };
