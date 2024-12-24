@@ -1,5 +1,9 @@
 import { getPosts } from "../../../functions/api";
 
+export const metadata = {
+  title: "Posts",
+};
+
 const Posts = async () => {
   const posts = await getPosts();
 

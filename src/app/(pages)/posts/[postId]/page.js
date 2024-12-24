@@ -1,7 +1,10 @@
+export const generateMetadata = async ({ params }) => {
+  const { postId } = await params;
 
-export const metadata = {
-  title: "Post"
-}
+  return {
+    title: `Post ${postId}`,
+  };
+};
 
 const POST = async ({ params }) => {
   const { postId } = await params;
