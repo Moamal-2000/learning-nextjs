@@ -28,10 +28,35 @@ a {
   background-color: teal;
   padding: 20px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   margin-bottom: 20px;
   font-size: 1.1rem;
+}
+
+.nav .routes {
+  display: flex;
+  gap: 20px;
+}
+
+.nav>div>a {
+  font-size: 1.2rem;
+}
+
+.nav .auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav .auth>span {
+  color: #ff6a00;
+  font-size: 1.2rem;
+}
+
+.nav .auth .wrapper {
+  display: flex;
+  gap: 20px;
 }
 
 p {
