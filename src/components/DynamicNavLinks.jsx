@@ -4,11 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 
-const DynamicNavLinks = ({ linksData }) => {
+const DynamicNavLinks = ({ linksData, cssModule, nameClass = "active" }) => {
   const activePath = usePathname();
 
   return linksData.map(({ name, href, children }) => {
-    const activeClass = activePath === href ? "active" : "";
+    const activeClass = activePath === href ? cssModule[nameClass] : "";
 
     return (
       <Fragment key={name}>
