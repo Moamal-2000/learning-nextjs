@@ -9,16 +9,9 @@ const nav = () => {
         <Link href="/about">About</Link>
         <Link href="/docs">Docs</Link>
         <Link href="/about/moamal">Me</Link>
-      </div>
-
-      <div className="auth">
-        <span>(</span>
-        <div className="wrapper">
-          <Link href="/login">Login</Link>
-          <Link href="/signup">Sign up</Link>
-          <Link href="/forgot-password">Forgot password?</Link>
-        </div>
-        <span>)</span>
+        <Link href="/login">Login</Link>
+        <Link href="/signup">Sign up</Link>
+        <Link href="/forgot-password">Forgot password?</Link>
       </div>
     </nav>
   );
