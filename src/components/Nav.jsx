@@ -1,14 +1,10 @@
-import Link from "next/link";
 import { navLinks } from "../data/staticData";
+import DynamicNavLinks from "./DynamicNavLinks";
 
 const nav = () => {
   return (
     <nav className="nav">
-      {navLinks.map(({ name, href }) => (
-        <Link key={name} href={href}>
-          {name}
-        </Link>
-      ))}
+      <DynamicNavLinks linksData={navLinks} />
     </nav>
   );
 };

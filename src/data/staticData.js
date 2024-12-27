@@ -10,14 +10,16 @@ export const navLinks = [
   {
     name: "About",
     href: "/about",
+    children: [
+      {
+        name: "Me",
+        href: "/about/moamal",
+      },
+    ],
   },
   {
     name: "Docs",
     href: "/docs",
-  },
-  {
-    name: "Me",
-    href: "/about/moamal",
   },
   {
     name: "Login",
