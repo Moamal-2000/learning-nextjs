@@ -36,4 +36,8 @@ a {
 
 .nav>a {
   font-size: 1.2rem;
+
+  &.active {
+    color: #ffd000;
+  }
 }
