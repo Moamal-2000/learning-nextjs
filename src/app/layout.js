@@ -3,7 +3,7 @@ import "./globals.scss";
 
 export const metadata = {
   title: {
-    default: "Home - Learning Next.js",
+    default: "Learning Next.js",
     template: "%s - Learning Next.js",
   },
   description: "This template is a starting point for learning Next.js",
