@@ -1,7 +1,10 @@
+import { redirect } from "next/navigation";
 import { getPosts } from "../functions/api";
 
 const Posts = async () => {
   const posts = await getPosts();
+
+  if (!posts) redirect("/posts/error");
 
   return (
     <>
