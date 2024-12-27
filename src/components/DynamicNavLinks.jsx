@@ -15,7 +15,13 @@ const DynamicNavLinks = ({ linksData, cssModule, nameClass = "active" }) => {
         <Link href={href} className={activeClass}>
           {name}
         </Link>
-        {children && <DynamicNavLinks linksData={children} />}
+        {children && (
+          <DynamicNavLinks
+            linksData={children}
+            cssModule={cssModule}
+            nameClass={nameClass}
+          />
+        )}
       </Fragment>
     );
   });
