@@ -1,7 +1,7 @@
 import { navLinks } from "../data/staticData";
 import DynamicNavLinks from "./DynamicNavLinks";
 
-const nav = () => {
+const Nav = () => {
   return (
     <nav className="nav">
       <DynamicNavLinks linksData={navLinks} />
@@ -9,4 +9,4 @@ const nav = () => {
   );
 };
 
-export default nav;
+export default Nav;

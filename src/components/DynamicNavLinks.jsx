@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Fragment } from "react";
 
 const DynamicNavLinks = ({ linksData }) => {
   const activePath = usePathname();
@@ -10,12 +11,12 @@ const DynamicNavLinks = ({ linksData }) => {
     const activeClass = activePath === href ? "active" : "";
 
     return (
-      <>
-        <Link key={name} href={href} className={activeClass}>
+      <Fragment key={name}>
+        <Link href={href} className={activeClass}>
           {name}
         </Link>
         {children && <DynamicNavLinks linksData={children} />}
-      </>
+      </Fragment>
     );
   });
 };
