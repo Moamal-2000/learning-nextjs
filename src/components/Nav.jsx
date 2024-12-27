@@ -4,13 +4,11 @@ import { navLinks } from "../data/staticData";
 const nav = () => {
   return (
     <nav className="nav">
-      <div className="routes">
-        {navLinks.map(({ name, href }) => (
-          <Link key={name} href={href}>
-            {name}
-          </Link>
-        ))}
-      </div>
+      {navLinks.map(({ name, href }) => (
+        <Link key={name} href={href}>
+          {name}
+        </Link>
+      ))}
     </nav>
   );
 };
