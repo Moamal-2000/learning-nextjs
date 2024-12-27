@@ -1,5 +1,5 @@
 import Nav from "../components/Nav.jsx";
-import "./globals.scss";
+import "../styles/globals.scss";
 
 export const metadata = {
   title: {

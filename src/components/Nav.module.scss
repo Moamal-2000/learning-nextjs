@@ -1,3 +1,5 @@
+@use "../styles/mixins" as m;
+
 .nav {
   background-color: teal;
   padding: 20px;
@@ -6,6 +8,12 @@
   flex-wrap: wrap;
   margin-bottom: 20px;
   font-size: 1.1rem;
+}
+
+@include m.small {
+  .nav {
+    background-color: #0575e4;
+  }
 }
 
 .nav>a {
