@@ -1,19 +1,14 @@
-"use client"
-
-import { Provider } from "react-redux";
-import Nav from "../components/Nav.jsx";
-import { store } from "../store/store.js";
+import RootProviders from "../components/RootProviders.jsx";
 import "../styles/globals.scss";
 
+export const metadata = {
+  title: {
+    default: "Learning Next.js",
+    template: "%s - Learning Next.js",
+  },
+  description: "This template is a starting point for learning Next.js",
+};
+
 export default function RootLayout({ children }) {
-  return (
-    <Provider store={store}>
-      <html lang="en">
-        <body>
-          <Nav />
-          <div className="container">{children}</div>
-        </body>
-      </html>
-    </Provider>
-  );
+  return <RootProviders children={children} />;
 }
