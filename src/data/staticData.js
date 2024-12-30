@@ -33,4 +33,8 @@ export const navLinks = [
     name: "Forgot password?",
     href: "/forgot-password",
   },
+  {
+    name: "Dashboard",
+    href: "/dashboard",
+  },
 ];
