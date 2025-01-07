@@ -1,5 +1,9 @@
+"use client";
+
+import { useGlobalContext } from "@/src/context/GlobalContext";
+
 const DashboardLayout = ({ children, notifications, user_profile, login }) => {
-  const isLogin = false;
+  const { isLogin } = useGlobalContext();
 
   return isLogin ? (
     <div>
