@@ -1,12 +1,11 @@
 export const metadata = {
-  title: "Me"
-}
+  title: "Me",
+};
 
 const Moamal = () => {
   return (
     <div>
-      <h1>This is me</h1>
-      <p>Moamal Alaa is a Front-end developer</p>
+      <h1>This is me :)</h1>
     </div>
   );
 };

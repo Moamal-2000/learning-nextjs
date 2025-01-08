@@ -9,10 +9,11 @@ const Docs = async ({ params }) => {
 
   return (
     <div>
-      <h1>Docs Page</h1>
-      <ShowText slug={slug} index={0} />
-      <ShowText slug={slug} index={1} />
-      <ShowText slug={slug} index={2} />
+      <h1>Docs Page, Slug page</h1>
+
+      {slug?.map((s, i) => (
+        <ShowText slug={slug} index={i} key={i} />
+      ))}
     </div>
   );
 };

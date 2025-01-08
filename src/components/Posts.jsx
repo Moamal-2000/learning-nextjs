@@ -1,7 +1,7 @@
 import { getPosts } from "../functions/api";
 
 const Posts = async () => {
-  const posts = await getPosts(true);
+  const posts = await getPosts();
 
   return (
     <>
