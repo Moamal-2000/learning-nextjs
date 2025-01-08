@@ -1,5 +1,1 @@
-const DefaultUserProfile = () => {
-  return <div>User Profile</div>;
-};
-
-export default DefaultUserProfile;
+export { default } from "./page";
