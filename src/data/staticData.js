@@ -37,4 +37,8 @@ export const navLinks = [
     name: "Dashboard",
     href: "/dashboard",
   },
+  {
+    name: "Test API",
+    href: "/api/test",
+  },
 ];

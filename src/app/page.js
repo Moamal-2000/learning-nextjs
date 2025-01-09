@@ -6,7 +6,7 @@ export const metadata = {
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <main className={s.home}>
       <h1>Home Page</h1>
