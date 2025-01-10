@@ -38,6 +38,10 @@ export const navLinks = [
     href: "/dashboard",
   },
   {
+    name: "Form",
+    href: "/form",
+  },
+  {
     name: "Test API",
     href: "/api/test",
   },
