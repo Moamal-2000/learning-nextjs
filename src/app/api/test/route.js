@@ -5,13 +5,12 @@ export async function GET() {
 }
 
 export async function POST(request) {
-  const { message } = await request.json();
-  const newMsg = { message, id: data.length + 1 };
+  const requestData = await request.json();
 
-  data.push(newMsg);
+  data.push(requestData);
 
   const headers = { "Content-Type": "application/json" };
-  const stringifiedRequest = JSON.stringify(newMsg);
+  const stringifiedRequest = JSON.stringify(requestData);
 
   return new Response(stringifiedRequest, { headers, status: 201 });
 }

@@ -1,4 +1,4 @@
-import AddMessageForm from "@/src/components/AddMessageForm";
+import Form from "@/src/components/Form";
 import { getTestData } from "@/src/functions/api";
 
 const FormPage = async () => {
@@ -6,12 +6,7 @@ const FormPage = async () => {
 
   return (
     <div>
-      {testData?.map(({ message, id }) => (
-        <h3>
-          {id}: {message}
-        </h3>
-      ))}
-      <AddMessageForm />
+      <Form testData={testData} />
     </div>
   );
 };
