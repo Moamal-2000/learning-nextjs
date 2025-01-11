@@ -1,23 +1,16 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const GlobalContext = createContext();
 
 const GlobalContextProvider = ({ children }) => {
-  const isLoginLocal = localStorage.getItem("isLogin");
-  const [isLogin, setIsLogin] = useState(
-    isLoginLocal ? JSON.parse(isLoginLocal) : false
-  );
+  const [isLogin, setIsLogin] = useState(false);
 
   const states = {
     isLogin,
     setIsLogin,
   };
-
-  useEffect(() => {
-    localStorage.setItem("isLogin", isLogin);
-  }, [isLogin]);
 
   return (
     <GlobalContext.Provider value={states}>{children}</GlobalContext.Provider>
