@@ -30,7 +30,9 @@ export async function updateCommentFromServer(id, message) {
   const endPoint = `http://localhost:3000/api/test/${id}`;
 
   try {
-    axios.patch(endPoint, { message });
+    const response = await axios.patch(endPoint, { message });
+    const data = await response.data;
+    return data;
   } catch (err) {
     console.log("Error while PATCH comment");
   }

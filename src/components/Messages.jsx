@@ -2,11 +2,11 @@
 
 import Message from "./Message";
 
-const Messages = ({ dataState }) => {
+const Messages = ({ dataState, setDataState }) => {
   return (
     <div className="messages">
       {dataState?.map((data) => (
-        <Message data={data} key={data.id} />
+        <Message dataState={dataState} data={data} key={data.id} setDataState={setDataState} />
       ))}
     </div>
   );
