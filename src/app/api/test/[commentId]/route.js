@@ -1,5 +1,7 @@
 import { data } from "../data";
 
+const headers = { "Content-Type": "application/json" };
+
 export async function GET(_, context) {
   const errorData = { error: "The id of the item is not found" };
   const { commentId } = await context.params;
@@ -13,11 +15,27 @@ export async function GET(_, context) {
 export async function PATCH(request, context) {
   const { commentId } = await context.params;
   const body = await request.json();
-  const isIdNumber = !isNaN(parseInt(commentId));
+  const id = parseInt(commentId);
+  const isIdNumber = !isNaN(id);
+  const commentIndex = data.findIndex((c) => c.id === id);
 
-  // Error handler
-  if (!isIdNumber)
-    return Response.json({ error: `input: \`${commentId}\` is not valid ID` });
+  if (!isIdNumber) return errorNotValidId(id);
+  if (commentIndex === -1) return errorNotFound(id);
 
-  return Response.json(body);
+  data[commentIndex].message = body.message;
+  return Response.json(data[commentIndex]);
+}
+
+function errorNotValidId(commentId) {
+  return new Response(
+    JSON.stringify({ error: `Input: \`${commentId}\` is not a valid ID` }),
+    { status: 400, headers }
+  );
+}
+
+function errorNotFound(commentId) {
+  return new Response(
+    JSON.stringify({ error: `Comment with ID \`${commentId}\` not found` }),
+    { status: 404, headers }
+  );
 }

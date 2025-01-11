@@ -19,6 +19,10 @@ a {
   color: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -43,4 +47,23 @@ a {
   width: 400px;
   padding: 20px;
   font-size: 1.3rem;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button,
+.message input {
+  padding: 4px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
 }

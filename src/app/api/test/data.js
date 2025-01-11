@@ -1,10 +1,10 @@
 export const data = [
   {
-    message: "Hello from test route!",
+    message: "First comment",
     id: 1,
   },
   {
-    message: "Hello from test route!",
+    message: "Second comment",
     id: 2,
   },
 ];

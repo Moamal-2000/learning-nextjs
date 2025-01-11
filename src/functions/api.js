@@ -25,3 +25,13 @@ export async function getTestData() {
     throw new Error("Error while fetching test data");
   }
 }
+
+export async function updateCommentFromServer(id, message) {
+  const endPoint = `http://localhost:3000/api/test/${id}`;
+
+  try {
+    axios.patch(endPoint, { message });
+  } catch (err) {
+    console.log("Error while PATCH comment");
+  }
+}

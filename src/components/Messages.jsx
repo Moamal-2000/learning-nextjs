@@ -1,11 +1,15 @@
 "use client";
 
+import Message from "./Message";
+
 const Messages = ({ dataState }) => {
-  return dataState?.map(({ message, id }) => (
-    <h3 key={id}>
-      {id}: {message}
-    </h3>
-  ));
+  return (
+    <div className="messages">
+      {dataState?.map((data) => (
+        <Message data={data} key={data.id} />
+      ))}
+    </div>
+  );
 };
 
 export default Messages;
