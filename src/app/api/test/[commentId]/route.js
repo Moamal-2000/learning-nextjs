@@ -9,3 +9,15 @@ export async function GET(_, context) {
 
   return Response.json(chosenData);
 }
+
+export async function PATCH(request, context) {
+  const { commentId } = await context.params;
+  const body = await request.json();
+  const isIdNumber = !isNaN(parseInt(commentId));
+
+  // Error handler
+  if (!isIdNumber)
+    return Response.json({ error: `input: \`${commentId}\` is not valid ID` });
+
+  return Response.json(body);
+}
